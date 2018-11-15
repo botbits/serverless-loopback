@@ -1,0 +1,50 @@
+{
+  "name": "serverless-loopback",
+  "version": "0.0.0",
+  "description": "Sample serverless project using loopback.",
+  "author": "BotBits (sm) (https://github.com/botbits)",
+  "keywords": [
+    "serverless",
+    "loopback",
+    "lambda",
+    "aws"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/botbits/serverless-loopback.git"
+  },
+  "bugs": {
+    "url": "https://github.com/botbits/serverless-loopback/issues"
+  },
+  "homepage": "https://github.com/botbits/serverless-loopback#readme",
+  "engines": {
+    "node": ">=6"
+  },
+  "main": "lambda-wrapper.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lb": "node_modules/loopback-cli/bin/loopback-cli.js",
+    "lb-model": "node_modules/loopback-cli/bin/loopback-cli.js model",
+    "sls-deploy": "node_modules/serverless/bin/serverless deploy --verbose",
+    "sls-cleanup": "node_modules/serverless/bin/serverless remove --verbose"
+  },
+  "dependencies": {
+    "compression": "^1.0.3",
+    "cors": "^2.5.2",
+    "helmet": "^3.10.0",
+    "loopback": "^3.23.2",
+    "loopback-boot": "^2.27.1",
+    "loopback-component-explorer": "^6.3.1",
+    "loopback-connector-mysql": "^5.3.1",
+    "serve-favicon": "^2.0.1",
+    "serverless-http": "^1.8.0",
+    "strong-error-handler": "^3.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-loopback": "^12.0.0",
+    "loopback-cli": "^4.2.1",
+    "serverless": "^1.32.0"
+  }
+}

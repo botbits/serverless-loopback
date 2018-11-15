@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mysql": {
+    "name": "mysql",
+    "connector": "mysql",
+    "host": "${DB_HOST}",
+    "port": "${DB_PORT}",
+    "database": "${DB_NAME}",
+    "connectTimeout": 600000,
+    "user": "${DB_USERNAME}",
+    "password": "${DB_PASSWORD}"
+  }
+}

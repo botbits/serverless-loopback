@@ -1,0 +1,92 @@
+service: serverless-loopback
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: ${opt:stage, self:custom.defaultStage}
+  region: us-east-1
+
+custom:
+  defaultStage: dev
+  DB:
+    dev:
+      # HOST: MY_HOST # provide this information if DB already exists
+      # PORT: MY_PORT # provide this information if DB already exists
+      NAME: MY_TEST_DB
+      USERNAME: admin
+      PASSWORD: password
+
+functions:
+  loopback:
+    handler: lambda-wrapper.handler
+    name: '${self:provider.stage}-loopback'
+    description: Sample loopback running in AWS lambda
+    memorySize: 512
+    timeout: 60
+    events:
+      - http: ANY /
+      - http: ANY {proxy+}
+    environment:
+      DB_HOST: { 'Fn::GetAtt': ['mySqlDb', 'Endpoint.Address' ] }
+      DB_PORT: { 'Fn::GetAtt': ['mySqlDb', 'Endpoint.Port' ] }
+      DB_NAME: '${self:custom.DB.${self:provider.stage}.NAME}'
+      DB_USERNAME: '${self:custom.DB.${self:provider.stage}.USERNAME}' # this will show in clear text in CloudFormation
+      DB_PASSWORD: '${self:custom.DB.${self:provider.stage}.PASSWORD}' # this will show in clear text in CloudFormation
+    vpc:
+      securityGroupIds:
+        - { 'Fn::GetAtt' : ['myVPC', 'DefaultSecurityGroup'] }
+      subnetIds:
+        - Ref: mySubnet1
+        - Ref: mySubnet2
+
+resources:
+  Resources:
+    # https://serverless.com/framework/docs/providers/aws/guide/resources#aws-cloudformation-resource-reference
+    # uses CloudFormation syntax - https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html
+    myVPC:
+      Type: AWS::EC2::VPC
+      Properties:
+        CidrBlock: 172.31.0.0/16
+        Tags:
+        - Key: Name
+          Value: ${self:service}-vpc
+
+    mySubnet1:
+      Type: AWS::EC2::Subnet
+      Properties:
+        AvailabilityZone: ${self:provider.region}a
+        VpcId:
+          Ref: myVPC
+        CidrBlock: 172.31.0.0/20
+
+    mySubnet2:
+      Type: AWS::EC2::Subnet
+      Properties:
+        AvailabilityZone: ${self:provider.region}b
+        VpcId:
+          Ref: myVPC
+        CidrBlock: 172.31.16.0/20
+
+    myDBSubnetGroup:
+      Type: 'AWS::RDS::DBSubnetGroup'
+      Properties:
+        DBSubnetGroupDescription: 'description'
+        SubnetIds:
+          - Ref: mySubnet1
+          - Ref: mySubnet2
+
+    mySqlDb:
+      # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html
+      Type: AWS::RDS::DBInstance
+      Properties:
+        AllocatedStorage: '5'
+        BackupRetentionPeriod: 0 # disabling backups for this sample
+        DBInstanceClass: 'db.t2.micro'
+        DBName: '${self:custom.DB.${self:provider.stage}.NAME}' # creating a database for this sample
+        DBSubnetGroupName: { 'Ref' : 'myDBSubnetGroup' }
+        Engine: 'mysql'
+        MasterUsername: '${self:custom.DB.${self:provider.stage}.USERNAME}' # this will show in clear text in CloudFormation
+        MasterUserPassword: '${self:custom.DB.${self:provider.stage}.PASSWORD}' # this will show in clear text in CloudFormation
+        MultiAZ: false
+        PubliclyAccessible: false
+        VPCSecurityGroups:
+          - { 'Fn::GetAtt' : ['myVPC', 'DefaultSecurityGroup'] }

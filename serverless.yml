@@ -78,15 +78,22 @@ resources:
       # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html
       Type: AWS::RDS::DBInstance
       Properties:
-        AllocatedStorage: '5'
+        AllocatedStorage: '5' # minimal size for this sample
         BackupRetentionPeriod: 0 # disabling backups for this sample
-        DBInstanceClass: 'db.t2.micro'
+        DBInstanceClass: 'db.t2.micro' # minimal size for this sample
         DBName: '${self:custom.DB.${self:provider.stage}.NAME}' # creating a database for this sample
         DBSubnetGroupName: { 'Ref' : 'myDBSubnetGroup' }
         Engine: 'mysql'
         MasterUsername: '${self:custom.DB.${self:provider.stage}.USERNAME}' # this will show in clear text in CloudFormation
         MasterUserPassword: '${self:custom.DB.${self:provider.stage}.PASSWORD}' # this will show in clear text in CloudFormation
-        MultiAZ: false
+        MultiAZ: false # disabling for this sample
         PubliclyAccessible: false
         VPCSecurityGroups:
           - { 'Fn::GetAtt' : ['myVPC', 'DefaultSecurityGroup'] }
+
+  # The "Outputs" that your AWS CloudFormation Stack should produce.  This allows references between services.
+  Outputs:
+    RdsDBInstanceIdentifier:
+      Description: The DB Name for the (MySQL) RDS created
+      Value:
+        Ref: mySqlDb

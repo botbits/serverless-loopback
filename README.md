@@ -12,6 +12,8 @@ A RDS (MySQL) database is created, along with all necessary virtual AWS infrastr
 <!--
 For ease of management RDS (MySQL) username/password can be retrieved from [AWS SSM Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-paramstore.html) and used in `serverless.yml` [see section *Handling Secrets for Small Teams & Projects*]](https://serverless.com/blog/serverless-secrets-api-keys/). -->
 
+Check out [this article](https://medium.com/smac-4u/serverless-loopback-9ff0d6fa539d) for a more in-depth explanation of this sample.
+
 ## Using
 
 [Create a *serverless* service](https://serverless.com/framework/docs/providers/aws/cli-reference/create) from this template by using the command:

@@ -33,7 +33,7 @@
     "compression": "^1.0.3",
     "cors": "^2.5.2",
     "helmet": "^3.10.0",
-    "loopback": "^3.23.2",
+    "loopback": "^3.26.0",
     "loopback-boot": "^2.27.1",
     "loopback-component-explorer": "^6.3.1",
     "loopback-connector-mysql": "^5.3.1",

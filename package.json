@@ -34,7 +34,7 @@
   "dependencies": {
     "compression": "^1.0.3",
     "cors": "^2.5.2",
-    "helmet": "^3.10.0",
+    "helmet": "^3.21.1",
     "loopback": "^3.26.0",
     "loopback-boot": "^2.27.1",
     "loopback-component-explorer": "^6.3.1",
@@ -42,7 +42,7 @@
     "serve-favicon": "^2.0.1",
     "serverless-http": "^1.8.0",
     "strong-error-handler": "^3.2.0",
-    "snyk": "^1.192.3"
+    "snyk": "^1.231.0"
   },
   "devDependencies": {
     "eslint": "^5.9.0",

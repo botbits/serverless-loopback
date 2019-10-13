@@ -42,7 +42,7 @@
     "serve-favicon": "^2.0.1",
     "serverless-http": "^1.8.0",
     "strong-error-handler": "^3.2.0",
-    "snyk": "^1.231.0"
+    "snyk": "^1.234.2"
   },
   "devDependencies": {
     "eslint": "^5.9.0",

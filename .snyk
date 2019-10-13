@@ -86,6 +86,16 @@ patch:
         patched: '2019-07-06T05:03:14.104Z'
     - loopback-boot > strong-globalize > g11n-pipeline > swagger-client > isomorphic-form-data > form-data > async > lodash:
         patched: '2019-07-06T05:03:14.104Z'
+    - snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
+        patched: '2019-10-13T01:35:13.715Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > lodash:
+        patched: '2019-10-13T01:35:13.715Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-10-13T01:35:13.715Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > lodash:
+        patched: '2019-10-13T01:35:13.715Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-10-13T01:35:13.715Z'
   SNYK-JS-HTTPSPROXYAGENT-469131:
     - snyk > proxy-agent > https-proxy-agent:
         patched: '2019-10-05T05:08:23.949Z'

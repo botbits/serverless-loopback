@@ -86,3 +86,8 @@ patch:
         patched: '2019-07-06T05:03:14.104Z'
     - loopback-boot > strong-globalize > g11n-pipeline > swagger-client > isomorphic-form-data > form-data > async > lodash:
         patched: '2019-07-06T05:03:14.104Z'
+  SNYK-JS-HTTPSPROXYAGENT-469131:
+    - snyk > proxy-agent > https-proxy-agent:
+        patched: '2019-10-05T05:08:23.949Z'
+    - snyk > proxy-agent > pac-proxy-agent > https-proxy-agent:
+        patched: '2019-10-05T05:08:23.949Z'

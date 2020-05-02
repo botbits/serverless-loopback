@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.13.5
+version: v1.14.1
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
@@ -91,3 +91,118 @@ patch:
         patched: '2019-10-05T05:08:23.949Z'
     - snyk > proxy-agent > pac-proxy-agent > https-proxy-agent:
         patched: '2019-10-05T05:08:23.949Z'
+  SNYK-JS-LODASH-567746:
+    - loopback-boot > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback-component-explorer > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback-connector-mysql > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback > async > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback-connector-mysql > async > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - strong-error-handler > strong-globalize > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback > strong-globalize > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback-component-explorer > strong-globalize > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback-connector-mysql > strong-globalize > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback > loopback-datasource-juggler > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback-boot > strong-globalize > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback-component-explorer > loopback-swagger > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - snyk > @snyk/dep-graph > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback > loopback-phase > async > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback > strong-remoting > async > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback > loopback-datasource-juggler > async > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback-connector-mysql > loopback-connector > async > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback-component-explorer > loopback-swagger > async > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback-connector-mysql > loopback-connector > strong-globalize > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback > loopback-phase > strong-globalize > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback > strong-remoting > strong-globalize > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback > loopback-datasource-juggler > strong-globalize > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback-component-explorer > loopback-swagger > strong-globalize > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback > loopback-connector-remote > loopback-datasource-juggler > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback > strong-remoting > jayson > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback > strong-remoting > loopback-phase > async > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback > loopback-connector-remote > strong-remoting > async > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback > loopback-datasource-juggler > loopback-connector > async > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback > loopback-connector-remote > loopback-datasource-juggler > async > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback > loopback-datasource-juggler > loopback-connector > strong-globalize > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback > loopback-connector-remote > loopback-datasource-juggler > strong-globalize > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback > strong-remoting > loopback-phase > strong-globalize > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback > strong-remoting > strong-error-handler > strong-globalize > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback > loopback-connector-remote > strong-remoting > strong-globalize > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback > loopback-connector-remote > strong-remoting > jayson > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback-boot > strong-globalize > g11n-pipeline > swagger-client > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/ruby-semver > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback > loopback-connector-remote > strong-remoting > loopback-phase > async > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback > loopback-connector-remote > loopback-datasource-juggler > loopback-connector > async > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback > loopback-connector-remote > loopback-datasource-juggler > loopback-connector > strong-globalize > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback > loopback-connector-remote > strong-remoting > loopback-phase > strong-globalize > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback > loopback-connector-remote > strong-remoting > strong-error-handler > strong-globalize > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - loopback-boot > strong-globalize > g11n-pipeline > swagger-client > isomorphic-form-data > form-data > async > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - snyk > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - snyk > inquirer > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - snyk > snyk-config > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - snyk > snyk-mvn-plugin > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - snyk > snyk-nodejs-lockfile-parser > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - snyk > snyk-nuget-plugin > lodash:
+        patched: '2020-05-02T05:04:20.327Z'
+    - snyk > snyk-php-plugin > @snyk/composer-lockfile-parser > lodash:
+        patched: '2020-05-02T05:04:20.327Z'

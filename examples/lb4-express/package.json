@@ -1,0 +1,77 @@
+{
+  "name": "@loopback/example-express-composition",
+  "version": "2.2.3",
+  "description": "LoopBack 4 REST API on Express",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "loopback-application",
+    "loopback",
+    "example",
+    "tutorial",
+    "express"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "presls-deploy": "npm run build",
+    "sls-deploy": "serverless deploy --verbose",
+    "sls-cleanup": "serverless remove --verbose",
+    "presls-offline": "npm run build",
+    "sls-offline": "serverless offline",
+    "build": "lb-tsc",
+    "build:watch": "lb-tsc --watch",
+    "clean": "lb-clean *example-express-composition*.tgz dist *.tsbuildinfo package",
+    "lint": "npm run prettier:check && npm run eslint",
+    "lint:fix": "npm run eslint:fix && npm run prettier:fix",
+    "prettier:cli": "lb-prettier \"**/*.ts\" \"**/*.js\"",
+    "prettier:check": "npm run prettier:cli -- -l",
+    "prettier:fix": "npm run prettier:cli -- --write",
+    "eslint": "lb-eslint --report-unused-disable-directives .",
+    "eslint:fix": "npm run eslint -- --fix",
+    "pretest": "npm run clean && npm run build",
+    "test": "lb-mocha \"dist/__tests__/**/*.js\"",
+    "posttest": "npm run lint",
+    "test:dev": "lb-mocha --allow-console-logs dist/__tests__/**/*.js && npm run posttest",
+    "migrate": "node ./dist/migrate",
+    "prestart": "npm run build",
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/strongloop/loopback-next.git",
+    "directory": "examples/express-composition"
+  },
+  "author": "IBM Corp.",
+  "copyright.owner": "IBM Corp.",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@loopback/boot": "^2.3.3",
+    "@loopback/core": "^2.8.0",
+    "@loopback/openapi-v3": "^3.4.3",
+    "@loopback/repository": "^2.7.0",
+    "@loopback/rest": "^5.1.1",
+    "@loopback/rest-explorer": "^2.2.4",
+    "@loopback/service-proxy": "^2.3.2",
+    "express": "^4.17.1",
+    "serverless-http": "^2.5.0",
+    "tslib": "^2.0.0"
+  },
+  "devDependencies": {
+    "@loopback/build": "^5.4.3",
+    "@loopback/cli": "^2.9.0",
+    "@loopback/eslint-config": "^8.0.1",
+    "@loopback/testlab": "^3.1.7",
+    "@types/express": "^4.17.6",
+    "@types/node": "^10.17.26",
+    "eslint": "^7.2.0",
+    "serverless": "^1.72.0",
+    "serverless-offline": "^6.4.0",
+    "typescript": "~3.9.5"
+  },
+  "gitHead": "f31b7e6de5a405a015cdd774f63d699b35d943cc"
+}

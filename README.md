@@ -23,7 +23,7 @@ Or clone the git repo:
 
 `git clone https://github.com/botbits/serverless-loopback`
 
-and `cd examples` to start checking you favorite example!
+and `cd examples` to start checking your favorite example!
 
 ## Contributing
 

@@ -10,18 +10,6 @@ For ease of management RDS (MySQL) username/password can be retrieved from [AWS 
 
 Check out [this article](https://medium.com/smac-4u/serverless-loopback-9ff0d6fa539d) for a more in-depth explanation of this sample.
 
-## Using
-
-[Create a *serverless* service](https://serverless.com/framework/docs/providers/aws/cli-reference/create) from this template by using the command:
-
-`serverless create --template-url https://github.com/botbits/serverless-loopback/example/lb3-express`
-
-<!--
-Or clone the git repo:
-
-`git clone https://github.com/botbits/serverless-loopback`
--->
-
 ## About Sample Provided
 
 The sample loopback application provided was created by following the process below:

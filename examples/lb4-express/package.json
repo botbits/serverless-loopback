@@ -70,7 +70,7 @@
     "@types/node": "^10.17.26",
     "eslint": "^7.2.0",
     "serverless": "^1.72.0",
-    "serverless-offline": "^6.4.0",
+    "serverless-offline": "^12.0.4",
     "typescript": "~3.9.5"
   },
   "gitHead": "f31b7e6de5a405a015cdd774f63d699b35d943cc"

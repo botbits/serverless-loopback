@@ -63,7 +63,7 @@
   },
   "devDependencies": {
     "@loopback/build": "^9.0.8",
-    "@loopback/cli": "^2.9.0",
+    "@loopback/cli": "^5.1.0",
     "@loopback/eslint-config": "^8.0.1",
     "@loopback/testlab": "^3.1.7",
     "@types/express": "^4.17.6",
